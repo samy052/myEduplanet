@@ -1,0 +1,49 @@
+.courses-by-domain {
+  max-width: 800px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.domain-tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.domain-tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.domain-tab.active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.domain-tab:hover {
+  transform: translateY(-3px);
+}
+
+.degree-list {
+  background-color: #e3e1e1;
+}
+.degree-list .degree {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.degree-list .degree:hover {
+  transform: translateY(-3px);
+  background-color: #ffffff;
+}

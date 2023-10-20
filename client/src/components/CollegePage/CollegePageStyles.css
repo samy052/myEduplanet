@@ -1,0 +1,54 @@
+.college-head-section {
+  background-color: #dfe6fa;
+  display: flex;
+  padding: 3%;
+}
+
+.college-head-section img {
+  margin-right: 1rem;
+  height: 7rem;
+  width: 7rem;
+}
+
+.college-head-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.college-head-text ul {
+  display: flex;
+  gap: 5rem;
+  margin-top: 1rem;
+}
+
+.college-filter-btns {
+  background-color: #fff;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-left: 3%;
+}
+
+.tab-section {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.tab-section.active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.college-content {
+  width: 60%;
+  padding-left: 3%;
+}
+
+.college-content-element {
+  height: 25rem;
+  width: 100%;
+  background-color: antiquewhite;
+  margin: 1rem 0;
+  padding: 0.5rem;
+}

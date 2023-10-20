@@ -1,0 +1,64 @@
+.review-cointainer {
+  background: url(../../../../assets/img/Second_Image.png);
+  background-size: cover;
+}
+
+.swiper-notifications {
+  display: none;
+}
+.review-heading {
+  text-align: center;
+  margin-top: 5rem;
+  letter-spacing: 1px;
+  color: #a3ad29;
+}
+
+.review-pannel {
+  /* background-color: rgb(175, 215, 231); */
+  background: rgb(245, 228, 240);
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.user-image {
+  height: 120px;
+  width: 120px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.text-section {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  text-align: center;
+  padding: 5px;
+}
+
+.user-position {
+  font-style: italic;
+  color: #000;
+}
+
+.user-name {
+  letter-spacing: 0.1rem;
+  padding: 0.3rem;
+  color: #000;
+}
+
+.user-review {
+  padding: 2.5rem;
+  padding-top: 2rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 150%;
+  font: 100 1.2rem;
+  color: #1e2761;
+}

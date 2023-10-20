@@ -1,0 +1,257 @@
+[
+    {
+      "name": "Indian Institute of Technology Bombay",
+      "state": "Maharashtra",
+      "website": "https://www.iitb.ac.in/"
+    },
+    {
+      "name": "National Institute of Technology Surathkal",
+      "state": "Karnataka",
+      "website": "https://www.nitk.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Management Ahmedabad",
+      "state": "Gujarat",
+      "website": "https://www.iima.ac.in/"
+    },
+    {
+      "name": "National Institute of Technology Trichy",
+      "state": "Tamil Nadu",
+      "website": "https://www.nitt.edu/"
+    },
+    {
+      "name": "Indian Institute of Technology Indore",
+      "state": "Madhya Pradesh",
+      "website": "https://www.iiti.ac.in/"
+    },
+    {
+      "name": "Xavier Labour Relations Institute, Jamshedpur",
+      "state": "Jharkhand",
+      "website": "https://www.xlri.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Bhubaneswar",
+      "state": "Odisha",
+      "website": "https://www.iitbbs.ac.in/"
+    },
+    {
+      "name": "Tata Institute of Social Sciences, Mumbai",
+      "state": "Maharashtra",
+      "website": "https://www.tiss.edu/"
+    },
+    {
+      "name": "Indian Institute of Management Calcutta",
+      "state": "West Bengal",
+      "website": "https://www.iimcal.ac.in/"
+    },
+    {
+      "name": "Vellore Institute of Technology, Vellore",
+      "state": "Tamil Nadu",
+      "website": "https://www.vit.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology (Banaras Hindu University) Varanasi",
+      "state": "Uttar Pradesh",
+      "website": "https://iitbhu.ac.in/"
+    },
+    {
+      "name": "National Institute of Technology Calicut",
+      "state": "Kerala",
+      "website": "https://www.nitc.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Jodhpur",
+      "state": "Rajasthan",
+      "website": "https://www.iitj.ac.in/"
+    },
+    {
+      "name": "Symbiosis International University, Pune",
+      "state": "Maharashtra",
+      "website": "https://www.siu.edu.in/"
+    },
+    {
+      "name": "Indian Institute of Management Kozhikode",
+      "state": "Kerala",
+      "website": "https://www.iimk.ac.in/"
+    },
+    {
+      "name": "Motilal Nehru National Institute of Technology Allahabad",
+      "state": "Uttar Pradesh",
+      "website": "https://www.mnnit.ac.in/"
+    },
+    {
+      "name": "National Institute of Industrial Engineering, Mumbai",
+      "state": "Maharashtra",
+      "website": "https://www.nitie.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Patna",
+      "state": "Bihar",
+      "website": "https://www.iitp.ac.in/"
+    },
+    {
+      "name": "Manipal Academy of Higher Education, Manipal",
+      "state": "Karnataka",
+      "website": "https://manipal.edu/"
+    },
+    {
+      "name": "Indian Institute of Technology Ropar",
+      "state": "Punjab",
+      "website": "https://www.iitrpr.ac.in/"
+    },
+    {
+      "name": "Jamia Millia Islamia, New Delhi",
+      "state": "Delhi",
+      "website": "https://www.jmi.ac.in/"
+    },
+    {
+      "name": "National Institute of Technology Durgapur",
+      "state": "West Bengal",
+      "website": "https://www.nitdgp.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Gandhinagar",
+      "state": "Gujarat",
+      "website": "https://www.iitgn.ac.in/"
+    },
+    {
+      "name": "Birla Institute of Technology, Mesra",
+      "state": "Jharkhand",
+      "website": "https://www.bitmesra.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology (Indian School of Mines) Dhanbad",
+      "state": "Jharkhand",
+      "website": "https://www.iitism.ac.in/"
+    },
+    {
+      "name": "University of Hyderabad, Hyderabad",
+      "state": "Telangana",
+      "website": "https://www.uohyd.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Bhilai",
+      "state": "Chhattisgarh",
+      "website": "https://www.iitbhilai.ac.in/"
+    },
+    {
+      "name": "National Institute of Technology Jamshedpur",
+      "state": "Jharkhand",
+      "website": "https://www.nitjsr.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Bhubaneswar",
+      "state": "Odisha",
+      "website": "https://www.iitbbs.ac.in/"
+    },
+    {
+      "name": "International Institute of Information Technology, Hyderabad",
+      "state": "Telangana",
+      "website": "https://www.iiit.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Mandi",
+      "state": "Himachal Pradesh",
+      "website": "https://www.iitmandi.ac.in/"
+    },
+    {
+      "name": "National Institute of Technology Hamirpur",
+      "state": "Himachal Pradesh",
+      "website": "https://www.nith.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Management Shillong",
+      "state": "Meghalaya",
+      "website": "https://www.iimshillong.ac.in/"
+    },
+    {
+      "name": "National Institute of Technology Meghalaya",
+      "state": "Meghalaya",
+      "website": "https://nitmeghalaya.in/"
+    },
+    {
+      "name": "Indian Institute of Technology (Indian School of Mines) Dhanbad",
+      "state": "Jharkhand",
+      "website": "https://www.iitism.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Jammu",
+      "state": "Jammu and Kashmir",
+      "website": "https://www.iitjammu.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Goa",
+      "state": "Goa",
+      "website": "https://www.iitgoa.ac.in/"
+    },
+    {
+      "name": "National Institute of Technology Silchar",
+      "state": "Assam",
+      "website": "https://www.nits.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Palakkad",
+      "state": "Kerala",
+      "website": "https://www.iitpkd.ac.in/"
+    },
+    {
+      "name": "National Institute of Technology Patna",
+      "state": "Bihar",
+      "website": "https://www.nitp.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Tirupati",
+      "state": "Andhra Pradesh",
+      "website": "https://www.iittp.ac.in/"
+    },
+    {
+      "name": "National Institute of Technology Raipur",
+      "state": "Chhattisgarh",
+      "website": "https://www.nitrr.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Dhanbad",
+      "state": "Jharkhand",
+      "website": "https://www.iitism.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology (Indian School of Mines) Dhanbad",
+      "state": "Jharkhand",
+      "website": "https://www.iitism.ac.in/"
+    },
+    {
+      "name": "National Institute of Technology Puducherry",
+      "state": "Puducherry",
+      "website": "https://www.nitpy.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Bhagalpur",
+      "state": "Bihar",
+      "website": "https://www.iitbhagalpur.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Jammu",
+      "state": "Jammu and Kashmir",
+      "website": "https://www.iitjammu.ac.in/"
+    },
+    {
+      "name": "National Institute of Technology Andhra Pradesh",
+      "state": "Andhra Pradesh",
+      "website": "https://www.nitandhra.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Gandhinagar",
+      "state": "Gujarat",
+      "website": "https://www.iitgn.ac.in/"
+    },
+    {
+      "name": "Indian Institute of Technology Dhanbad",
+      "state": "Jharkhand",
+      "website": "https://www.iitism.ac.in/"
+    },
+    {
+      "name": "National Institute of Technology Mizoram",
+      "state": "Mizoram",
+      "website": "https://www.nitmz.ac.in/"
+    }
+  ]

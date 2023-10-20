@@ -1,0 +1,30 @@
+/* FormInput.css */
+
+.form-input {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    height: 120px;
+    resize: vertical;
+  }
+  
+  input[type="file"] {
+    font-size: 14px;
+  }
+  
+  /* Add any additional styling as needed */
