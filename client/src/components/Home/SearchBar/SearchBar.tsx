@@ -63,7 +63,7 @@ const SearchBar = () => {
     <>
       <section className="search_section">
         <div className="search_section_heading">
-          <h1>Search Your Dream Here!!!</h1>
+          <h1>Find college, <br />courses & exams</h1>
         </div>
         <div className="input-box">
           <input

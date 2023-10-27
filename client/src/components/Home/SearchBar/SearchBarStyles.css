@@ -1,17 +1,22 @@
 .search_section {
-  background-image: url("../../../../assets/img/20689.jpg");
+  background-image: url("../../../../assets/img/3d-render-graduation-cap-books-d.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 44rem;
+  height: 35rem;
+  opacity: 0.9;
+  
 }
 
 .search_section h1 {
   padding-bottom: 5rem;
-  padding-top: 10rem;
-  color: #000;
-  font-size: 35px;
-  text-align: center;
+  padding-top: 6rem;
+  color:#012d58;
+  font-size: 65px;
+  text-align: left;
+  /* margin-left: 250px; */
+  margin-left: 8vw;
+  line-height: 130%;
   /* text-shadow: 0 5px 10px rgb(230, 6, 6); */
 
 }
@@ -19,10 +24,10 @@
 .input-box {
   position: relative;
   height: 76px;
-  max-width: 760px;
+  max-width: 40vw;
   width: 100%;
   background: #fff;
-  margin: 0 auto;
+  margin-left: 8vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,7 +48,7 @@
   font-size: 18px;
   font-weight: 400;
   border: none;
-  padding: 0 155px 0 65px;
+  padding-right: 5px;
   background-color: transparent;
 }
 
@@ -131,7 +136,7 @@
   color: #000;
   text-align: center;
   position: relative;
-  padding: 8px 12px;
+  padding: 6px 12px;
   /* Added padding */
   border-radius: 8px;
   /* Added border-radius */
@@ -141,9 +146,9 @@
 }
 
 .active_option {
-  color: white;
+  /* color: white; */
   background-color: #2794eb;
-  border-bottom: 2px solid #f3f3f3;
+  /* border-bottom: 1px solid #f3f3f3; */
 
 }
 

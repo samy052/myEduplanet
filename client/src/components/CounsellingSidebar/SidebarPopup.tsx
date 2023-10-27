@@ -16,7 +16,7 @@ const SidebarPopup = () => {
     <div className={`sidebar-popup ${isOpen ? 'open' : ''}`}>
       <div className="popup-container">
         <button className="toggle-button" onClick={togglePopup}>
-          Need a Professional Counsellor?
+          Need Counsellor!
         </button>
         {isOpen && (
           <div className="popup-content">
