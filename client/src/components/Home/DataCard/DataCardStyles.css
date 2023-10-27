@@ -1,4 +1,5 @@
 .container-card {
+  margin-top: 6rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -7,11 +8,11 @@
 .smallBlk {
   flex: 1;
   max-width: calc(33.33% - 32px);
-  border: 1px solid #ccc;
+  border: 1px solid #426ae0;
   border-radius: 8px;
   padding: 16px;
   margin: 16px;
-  background-color: #FFFFFF;
+  background-color: #f0f4ff;
   box-sizing: border-box;
 }
 

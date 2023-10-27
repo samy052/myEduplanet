@@ -1,4 +1,71 @@
-.news-cointainer{
+.news-section-container h1 {
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    font-weight: 100;
+    font-size: 2.2rem;
+    color: #426ae0;
+}
+
+.news-section-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.new-section-card {
+    width: 23rem;
+    height: 20rem;
+    background-color: #f0f4ff;
+    cursor: pointer;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    border: 1px solid #000;
+}
+
+.new-section-card:hover {
+    transform: scale(0.98);
+    transition: 0.3s ease-in;
+}
+
+.new-section-card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-bottom: 1px solid #000;
+    /* transition: all ease 0.5s; */
+}
+
+/* .vlogs-card img:hover {
+    transform: scale(1.1);
+} */
+/* .new-section-card:hover{
+
+} */
+.new-section-card-text-section {
+    padding-left: 1rem;
+    padding-top: 0.6rem;
+    color: #000;
+}
+
+.new-section-card-more-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    margin-top: 1.6rem;
+    padding-right: 1rem;
+}
+
+@media (width<820px) {
+    .vlogs-card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* .news-cointainer{
     height: 5rem;
     
 
@@ -58,4 +125,4 @@ a .news-timeline {
         width: 6rem;
     }
 
-}
+} */

@@ -1,4 +1,11 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const DataCard = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const topCollege = [
     {
       iconSrc: "https://cache.careers360.mobi/images/home/ranking.svg",
@@ -37,9 +44,9 @@ const DataCard = () => {
   ];
 
   return (
-    <div className="container-card">
+    <div className="container-card" >
       {topCollege.map((element, key) => (
-        <div className="smallBlk" key={key}>
+        <div className="smallBlk" key={key} data-aos="fade-right">
           <h3 className="heading3">
             <img src={element.iconSrc} alt="Icon" className="sIcon" />
             {element.title}
@@ -61,8 +68,8 @@ const DataCard = () => {
         </div>
       ))}
 
-      {upcomingExams.map((element,key) => (
-        <div className="smallBlk" key={key}>
+      {upcomingExams.map((element, key) => (
+        <div className="smallBlk" key={key} data-aos="fade-left">
           <h3 className="heading3">
             <img src={element.iconSrc} alt="Icon" className="sIcon" />
             {element.title}

@@ -1,34 +1,30 @@
-.review-cointainer {
-  background: url(../../../../assets/img/Second_Image.png);
-  background-size: cover;
-}
-
-.swiper-notifications {
-  display: none;
-}
-.review-heading {
+.review-section h1 {
   text-align: center;
-  margin-top: 5rem;
   letter-spacing: 1px;
-  color: #a3ad29;
+  color: #426ae0;
 }
 
 .review-pannel {
-  /* background-color: rgb(175, 215, 231); */
-  background: rgb(245, 228, 240);
+  background: #f0f4ff;
   border-radius: 10px;
   max-width: 500px;
-  margin: auto;
-  margin-top: 10px;
-  padding: 20px;
+  margin: 10px auto;
+  padding: 10px;
 }
 
 .user-image {
+  border-radius: 50%;
   height: 120px;
   width: 120px;
+  border: 3px solid #426ae0;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.user-image img {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #fff;
@@ -38,27 +34,44 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 5px;
-  text-align: center;
-  padding: 5px;
 }
 
 .user-position {
   font-style: italic;
   color: #000;
+  text-align: center;
 }
 
 .user-name {
   letter-spacing: 0.1rem;
   padding: 0.3rem;
   color: #000;
+  text-align: center;
 }
 
 .user-review {
-  padding: 2.5rem;
-  padding-top: 2rem;
+  padding: 1rem 2rem;
+  padding-bottom: 2rem;
   letter-spacing: 1px;
   word-spacing: 2px;
   line-height: 150%;
   font: 100 1.2rem;
   color: #1e2761;
+}
+
+@media (width<530px) {
+  .review-heading {
+    letter-spacing: 0.3px;
+    font-size: 1.5rem;
+  }
+
+  .review-pannel {
+    width: 94%;
+  }
+
+  .user-review {
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    font: 50 0.6rem;
+  }
 }

@@ -31,7 +31,7 @@ const AffiliatedColleges = () => {
     // dots: true,
     navigation: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -40,6 +40,7 @@ const AffiliatedColleges = () => {
 
   return (
     <div className="affiliated-colleges-slider">
+      <br /><br />
       <h2 className="affiliated-colleges-heading">Associated Colleges</h2>
       <Slider {...settings}>
         {colleges.map((college) => (

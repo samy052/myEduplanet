@@ -4,7 +4,14 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const ReviewSection = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const data = [
     {
       id: 1,
@@ -36,29 +43,36 @@ const ReviewSection = () => {
   return (
     <>
       <div className="review-cointainer">
-        <h1 className="review-heading">What people think about us?</h1>
-        <div className="review-pannel">
-          <Swiper
-            modules={[Navigation, Pagination, A11y]}
-            spaceBetween={20}
-            slidesPerView={1}
-            navigation
-            pagination={{ clickable: true }}
-          >
-            {data.map((user) => (
-              <SwiperSlide key={user.id}>
-                <div className="review-content">
-                  <img src={user["image"]} alt="" className="user-image" />
-                  <div className="text-section">
-                    <h2 className="user-name">{user.name}</h2>
-                    <h4 className="user-position">{user.position}</h4>
-                    <p className="user-review">" {user.review} "</p>
+        <div className="review-section" data-aos="fade-right">
+          <br />
+          <br />
+          <h1 className="review-section">What people think about us?</h1>
+          <div className="review-pannel">
+            <Swiper
+              modules={[Navigation, Pagination, A11y]}
+              spaceBetween={20}
+              slidesPerView={1}
+              pagination={{ clickable: true }}
+            >
+              {data.map((user) => (
+                <SwiperSlide key={user.id}>
+                  <div className="review-content">
+                    <div className="user-image">
+                      <img src={user["image"]} alt="" />
+                    </div>
+                    <div className="text-section">
+                      <h2 className="user-name">{user.name}</h2>
+                      <h4 className="user-position">{user.position}</h4>
+                      <p className="user-review">" {user.review} "</p>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
+        <br />
+        <br />
       </div>
     </>
   );
