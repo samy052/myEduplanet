@@ -5,12 +5,15 @@
 
 .colleges-page{
   background-color: #fff;
+
 }
 
 .college-card-container {
   width: 40rem;
-  margin: 0 auto;
+  margin: 5rem auto;
   padding: 1rem;
+  
+
 }
 
 .college-card {

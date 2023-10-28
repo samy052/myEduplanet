@@ -15,9 +15,12 @@ const SidebarPopup = () => {
   return (
     <div className={`sidebar-popup ${isOpen ? 'open' : ''}`}>
       <div className="popup-container">
-        <button className="toggle-button" onClick={togglePopup}>
+        <div className='glow-on-hover'>
+          <button className="toggle-button" onClick={togglePopup}>
           Need Counsellor!
         </button>
+         </div>
+        
         {isOpen && (
           <div className="popup-content">
             <button className="close-button" onClick={closePopup}>

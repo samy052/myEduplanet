@@ -3,14 +3,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 35rem;
+  height: 85vh;
   opacity: 0.9;
   
 }
 
 .search_section h1 {
   padding-bottom: 5rem;
-  padding-top: 6rem;
+  padding-top: 8rem;
   color:#012d58;
   font-size: 65px;
   text-align: left;
@@ -146,9 +146,10 @@
 }
 
 .active_option {
-  /* color: white; */
-  background-color: #2794eb;
+  color: white;
+  /* background-color: #2794eb; */
   /* border-bottom: 1px solid #f3f3f3; */
+  background-color: #716EF1;
 
 }
 
