@@ -1,4 +1,3 @@
-
 .NavBarItems {
   display: flex;
   justify-content: space-between;
@@ -6,15 +5,15 @@
   font-size: 1rem;
   padding: 0 33px;
   width: 100%;
-  height: 70px;
+  height: 60px;
   z-index: 100;
-  background-color: #BAC3F4;
+  background-color: #bac3f4;
   /* background-color: #2794eb; */
-   /* background-color: #486ddc;  */
-   /* background-color: #0774d9; */
+  /* background-color: #486ddc;  */
+  /* background-color: #0774d9; */
   /* border-bottom: white 1px solid; */
   /* border-radius: 13px;  */
-  position:fixed ;
+  position: fixed;
   top: 0;
   /* top: 20px;
     left: 50%;
@@ -71,7 +70,7 @@
   padding: 0.5rem 0.8rem;
   white-space: nowrap;
   /* background-color:#716EF1; */
-  background-color:  #2794eb;
+  background-color: #716eef;
   border-radius: 30px;
   border: none;
   text-decoration: none;
@@ -81,8 +80,14 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 850px) {
+.nav-links-mobile:hover {
+  /* background-color: #000;
+  color: #fff; */
+  transform: scale(1.06);
+  transition: all ease-out 0.5s;
+}
 
+@media screen and (max-width: 850px) {
   .logo {
     font-size: 0.8rem;
   }
@@ -142,7 +147,6 @@
     width: 80%;
     margin: auto;
   }
-
 }
 
 .user {

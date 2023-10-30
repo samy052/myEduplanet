@@ -104,7 +104,7 @@ const SearchBar = () => {
         </div>
         {search !== "" && (
           <div className="search_result">
-            {filteredClgName.slice(0, 300).map((college, index) => (
+            {filteredClgName.slice(0, 6).map((college, index) => (
               <Link
                 to={`/${selectedOption.toLowerCase()}/${college["Name"]}/${college["City"]}/${college["Zipcode"]}/${college["Contact_Number"]}`}
                 key={index}

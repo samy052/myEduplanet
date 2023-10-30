@@ -2,7 +2,8 @@
 
 .admin-form {
   max-width: 600px;
-  margin: 0 auto;
+  /* margin-top: 10%; */
+  margin: 05vw auto;
   padding: 2rem;
   background-color: #fff;
   border: 1px solid #ccc;

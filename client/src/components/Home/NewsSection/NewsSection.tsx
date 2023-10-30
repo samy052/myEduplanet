@@ -3,9 +3,7 @@
 // import "slick-carousel/slick/slick-theme.css";
 // import { Link } from "react-router-dom";
 
-
 const NewsSection = () => {
-
   const newsData = [
     {
       id: 4,
@@ -14,6 +12,22 @@ const NewsSection = () => {
       url: "https://wearecoandco.com/",
       image:
         "https://images.unsplash.com/photo-1635530027421-b793c5c8d045?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNvdXJjZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60",
+    },
+    {
+      id: 5,
+      newsContent: "Examination dates for GATE and CAT are now confirmed.",
+      timeline: "1 Jan, 2023, 18:34 IST",
+      url: "https://verbalplusvisual.com/",
+      image:
+        "https://images.unsplash.com/photo-1585399000684-d2f72660f092?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NXw5NDc5NTAwfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=700&q=60",
+    },
+    {
+      id: 6,
+      newsContent: "Examination dates for GATE and CAT are now confirmed.",
+      timeline: "1 Jan, 2023, 18:34 IST",
+      url: "https://www.monographcomms.ca/",
+      image:
+        "https://images.unsplash.com/photo-1625225233840-695456021cde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NDc5NTAwfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=700&q=60",
     },
     {
       id: 5,
@@ -66,7 +80,7 @@ const NewsSection = () => {
         <h1>Exam Notifications</h1>
         <div className="news-section-card-container">
           {newsData.map((val, ind) => (
-            <div className="new-section-card" key={ind} >
+            <div className="new-section-card" key={ind}>
               <img src={val.image} alt="" />
               <div className="new-section-card-text-section">
                 <p>{val.newsContent}</p>
@@ -76,8 +90,12 @@ const NewsSection = () => {
               </div>
             </div>
           ))}
+          <div className="see-more-button">
+            <button><i className="fa-solid fa-arrow-right fa-beat-fade"></i></button>
+          </div>
         </div>
       </div>
+
       {/* <div className="news-cointainer">
         <Link to={"/vlogs"}>
           <h2 className="news-heading">Exam Notifications</h2>

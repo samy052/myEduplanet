@@ -1,7 +1,12 @@
 .review-section h1 {
+  text-transform: uppercase;
   text-align: center;
-  letter-spacing: 1px;
-  color: #426ae0;
+  font-weight: 100;
+  font-size: 2.2rem;
+  /* color: #012d58; */
+  /* color: #716EEF; */
+  color: #716EEF;
+  /* letter-spacing: 1px; */
 }
 
 .review-pannel {
