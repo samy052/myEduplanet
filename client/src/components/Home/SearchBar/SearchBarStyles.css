@@ -5,13 +5,12 @@
   background-position: center;
   height: 85vh;
   opacity: 0.9;
-  
 }
 
 .search_section h1 {
   padding-bottom: 5rem;
   padding-top: 8rem;
-  color:#012d58;
+  color: #012d58;
   font-size: 65px;
   text-align: left;
   /* margin-left: 250px; */
@@ -24,8 +23,9 @@
 .input-box {
   position: relative;
   height: 76px;
-  max-width: 40vw;
-  width: 100%;
+  /* max-width: 40vw;
+  width: 100%; */
+  width: 40rem;
   background: #fff;
   margin-left: 8vw;
   display: flex;
@@ -67,12 +67,11 @@
 
 .search_result {
   position: absolute;
-  top: calc(100% -173px);
-  /* left: 28%; */
-  margin-left: 28vw;
+  left: calc(100% - 320px);
+  top: 4.7rem;
   transform: translate(-50%);
-  max-height: 300px;
-  width: 40vw;
+  max-height: 200px;
+  width: 100%;
   overflow-y: auto;
   border-radius: 5px;
   background-color: #fff;
@@ -167,8 +166,9 @@
 
 
 @media screen and (max-width: 500px) {
-  .input-box {
-    height: 66px;
+
+  .search_options span {
+    font-size: 20px;
   }
 
   .input-box i {
@@ -177,7 +177,8 @@
   }
 
   .input-box input {
-    padding: 0 8px 0 5px;
+    padding: 0 8px 0 15px;
+    font-size: 15px;
   }
 
   .input-box .button {
@@ -186,12 +187,9 @@
     padding: 8px 18px;
   }
 
-  .search_result {
-    margin-top: 8.3rem
-  }
-
   .search_section h1 {
-    font-size: 1.5rem;
+    /* text-align: center; */
+    font-size: 2rem;
   }
 
   .search_section {
@@ -199,8 +197,23 @@
   }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 720px) {
+  .input-box {
+    height: 55px;
+    width: 98%;
+    margin-left: 1vw;
+    
+  }
+
+  .search_section h1 {
+    margin-left: 2vw;
+  }
+
   .search_result {
-    width: 94%;
+    top: 3.5rem;
+    left: 50%;
+    
+
+    /* left: 20rem; */
   }
 }

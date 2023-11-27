@@ -63,8 +63,12 @@ const SearchBar = () => {
     <>
       <section className="search_section">
         <div className="search_section_heading">
-          <h1>Find college, <br />courses & exams</h1>
+          <h1>
+            Find college, <br />
+            courses & exams
+          </h1>
         </div>
+
         <div className="input-box">
           <input
             type="text"
@@ -73,6 +77,14 @@ const SearchBar = () => {
             onChange={handleChange}
             value={search}
           />
+          <button className="button">
+            {search === "" ? (
+              <i className="fa fa-search"></i>
+            ) : (
+              <i className="fa fa-times" onClick={handleClose}></i>
+            )}
+          </button>
+
           <div className="search_options">
             <span
               className={selectedOption === "Colleges" ? "active_option" : ""}
@@ -94,28 +106,23 @@ const SearchBar = () => {
             </span>
           </div>
 
-          <button className="button">
-            {search === "" ? (
-              <i className="fa fa-search"></i>
-            ) : (
-              <i className="fa fa-times" onClick={handleClose}></i>
-            )}
-          </button>
+          {search !== "" && (
+            <div className="search_result">
+              {filteredClgName.slice(0, 300).map((college, index) => (
+                <Link
+                  to={`/${selectedOption.toLowerCase()}/${college["Name"]}/${
+                    college["City"]
+                  }/${college["Zipcode"]}/${college["Contact_Number"]}`}
+                  key={index}
+                  // target="_blank"
+                  className="search_suggestion_line"
+                >
+                  {college.Name}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
-        {search !== "" && (
-          <div className="search_result">
-            {filteredClgName.slice(0, 6).map((college, index) => (
-              <Link
-                to={`/${selectedOption.toLowerCase()}/${college["Name"]}/${college["City"]}/${college["Zipcode"]}/${college["Contact_Number"]}`}
-                key={index}
-                // target="_blank"
-                className="search_suggestion_line"
-              >
-                {college.Name}
-              </Link>
-            ))}
-          </div>
-        )}
       </section>
     </>
   );

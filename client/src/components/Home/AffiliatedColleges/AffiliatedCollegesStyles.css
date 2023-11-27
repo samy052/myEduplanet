@@ -1,40 +1,59 @@
-    .affiliated-colleges-slider {
-        margin-top: 3rem;
-        padding-bottom: 3rem;
-        background-color: #f0f4ff;
-    }
+.affiliated-colleges-slider {
+  margin-top: -1rem;
+  padding-bottom: 3rem;
+  background-color: #f0f4ff;
+}
 
-    .affiliated-colleges-heading {
-        text-transform: uppercase;
-        text-align: center;
-        color: #426ae0;
-        font-size: 2rem;
-        font-weight: 600;
-    }
+.affiliated-colleges-heading {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 100;
+  font-size: 2.2rem;
+  /* color: #012d58; */
+  color: #716eef;
+}
 
-    .affiliated-college-image {
-        margin-top: 2.4rem;
-        width: 90%;
-        height: 36rem;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 1.5rem;
-        border: 0.1rem solid #426ae0;
-    }
+.affiliated-college-image {
+  margin-top: 1.8rem;
+  width: 90%;
+  height: 36rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* border: 0.1rem solid #426ae0; */
+}
 
-    .affiliated-college-link-container {
-        width: 80%;
-        text-align: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.affiliated-college-link-container {
+  width: 80%;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    .affiliated-college-link {
-        text-transform: uppercase;
-        color: #426ae0;
-        cursor: pointer;
-        text-decoration: none;
-        font-size: 2rem;
-    }
+.affiliated-college-link {
+  text-transform: uppercase;
+  color: #426ae0;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+@media (width<600px) {
+  .affiliated-colleges-heading {
+      font-size: 1.6rem;
+  }
+
+  .affiliated-college-image {
+      width: 98%;
+      height: 60%;
+      border-radius: 0.4rem;
+      margin-top: 1rem;
+  }
+
+  .affiliated-college-link {
+      font-size: 1.2rem;
+  }
+}

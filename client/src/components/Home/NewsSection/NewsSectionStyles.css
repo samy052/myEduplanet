@@ -18,26 +18,27 @@
   margin: 1rem auto;
   display: grid;
   column-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 5fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 5fr));
 }
 
-.new-section-card {
+.news-section-card {
   width: 23rem;
   height: 20rem;
   background-color: #f0f4ff;
   cursor: pointer;
   border-radius: 1rem;
   overflow: hidden;
+  margin: 0 auto;
   margin-bottom: 3rem;
   border: 1px solid #000;
 }
 
-.new-section-card:hover {
+.news-section-card:hover {
   transform: scale(0.98);
   transition: 0.3s ease-in;
 }
 
-.new-section-card img {
+.news-section-card img {
   width: 100%;
   height: 60%;
   object-fit: cover;
@@ -45,19 +46,13 @@
   /* transition: all ease 0.5s; */
 }
 
-/* .vlogs-card img:hover {
-  transform: scale(1.1);
-} */
-/* .new-section-card:hover{
-
-} */
-.new-section-card-text-section {
+.news-section-card-text-section {
   padding-left: 1rem;
   padding-top: 0.6rem;
   color: #000;
 }
 
-.new-section-card-more-details {
+.news-section-card-more-details {
   display: flex;
   justify-content: space-between;
   gap: 0.8rem;
@@ -65,7 +60,7 @@
   padding-right: 1rem;
 }
 
-.see-more-button {
+.see-more-button1 {
   margin-bottom: 1rem;
   text-align: center;
   display: flex;
@@ -73,7 +68,7 @@
   justify-content: center;
 }
 
-.see-more-button button {
+.see-more-button1 button {
   /* width: 10rem; */
   /* padding: 1rem; */
   border-radius: 50%;
@@ -90,18 +85,62 @@
   border: 1px solid #012d58;
 }
 
-.see-more-button button:hover {
+.see-more-button1 button:hover {
   background-color: #012d58;
   color: #fff;
   transition: all ease-out 0.5s;
 }
 
-/* @media (width<820px) {
-  .news-section-card-container {
-      flex-direction: column;
-      align-items: center;
+.see-more-button2 {
+  display: none;
+}
+
+@media (width<600px) {
+  .news-section-container h1 {
+      font-size: 1.6rem;
   }
-} */
+
+  .news-section-card {
+      display: flex;
+      height: 5rem;
+      border-radius: 0.4rem;
+      margin-bottom: 1rem;
+  }
+
+  .news-section-card img {
+      height: 100%;
+      width: 30%;
+      border-right: 1px solid #000;
+      border-bottom: none;
+  }
+
+  .news-section-card-text-section {
+      padding-left: 5px;
+      padding-top: 3px;
+      font-size: 0.8rem;
+  }
+
+  .news-section-card-more-details {
+      margin-top: 1rem;
+  }
+
+  .see-more-button1 button {
+      display: none;
+  }
+
+  .see-more-button2 {
+      display: block;
+      text-align: center;
+  }
+
+  .see-more-button2 button {
+      padding: 0.2rem 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 300;
+      text-align: center;
+      cursor: pointer;
+  }
+}
 
 /* .news-cointainer{
   height: 5rem;

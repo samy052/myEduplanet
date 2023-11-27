@@ -19,6 +19,46 @@ mongoose
   .catch(() => {
     console.log("error");
   });
+  const db = mongoose.connection;
+
+  db.once('open', async () => {
+    try {
+      // Step 1: Update collection1
+      const allColleges = await collection1.find({});
+  
+      for (let i = 0; i < allColleges.length; i++) {
+        const college = allColleges[i];
+        await collection1.updateOne(
+          { _id: college._id },
+          { $set: { uniqueId: i + 1 } }
+        );
+      }
+  
+      console.log("Unique IDs added successfully to collection1");
+  
+      // Step 2: Update collection2
+      const allColleges1 = await collection1.find({});
+      const allColleges2 = await collection2.find({});
+  
+      for (let i = 0; i < allColleges1.length; i++) {
+        const college1 = allColleges1[i];
+        const matchingCollege2 = allColleges2.find(college2 => college2.formData?.collegeName === college1.Name);
+  
+        if (matchingCollege2) {
+          await collection2.updateOne(
+            { Name: college1.Name },
+            { $set: { uniqueId: i + 1 } }
+          );
+          console.log("Unique IDs added successfully to collection2");
+        }
+        
+      }
+  
+      
+    } catch (error) {
+      console.error(error);
+    }
+  });
 
 //route to fetch college data from  dataBASE
 

@@ -44,8 +44,7 @@ const ReviewSection = () => {
     <>
       <div className="review-cointainer">
         <div className="review-section" data-aos="fade-right">
-          <br />
-          <br />
+          
           <h1 className="review-section">What people think about us?</h1>
           <div className="review-pannel">
             <Swiper

@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
 
 const newSchema1 = new mongoose.Schema({
-  //  "Name" : String,
-  //  "Address" : String,
+   "Name" : String,
+   uniqueId: String
+
 });
 const newSchema2 = new mongoose.Schema({
   formData: {
@@ -16,6 +17,8 @@ const newSchema2 = new mongoose.Schema({
     gallery: String,
     review: String,
     faq: String,
+    uniqueId: String
+
   },
 });
 

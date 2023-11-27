@@ -80,18 +80,21 @@ const NewsSection = () => {
         <h1>Exam Notifications</h1>
         <div className="news-section-card-container">
           {newsData.map((val, ind) => (
-            <div className="new-section-card" key={ind}>
+            <div className="news-section-card" key={ind}>
               <img src={val.image} alt="" />
-              <div className="new-section-card-text-section">
+              <div className="news-section-card-text-section">
                 <p>{val.newsContent}</p>
-                <div className="new-section-card-more-details">
+                <div className="news-section-card-more-details">
                   <p>{val.timeline}</p>
                 </div>
               </div>
             </div>
           ))}
-          <div className="see-more-button">
+          <div className="see-more-button1">
             <button><i className="fa-solid fa-arrow-right fa-beat-fade"></i></button>
+          </div>
+          <div className="see-more-button2">
+            <button>More Like This</button>
           </div>
         </div>
       </div>

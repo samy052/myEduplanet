@@ -6,8 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.collection2 = exports.collection1 = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const newSchema1 = new mongoose_1.default.Schema({
-//  "Name" : String,
-//  "Address" : String,
+    "Name": String,
+    uniqueId: String
 });
 const newSchema2 = new mongoose_1.default.Schema({
     formData: {
@@ -21,6 +21,7 @@ const newSchema2 = new mongoose_1.default.Schema({
         gallery: String,
         review: String,
         faq: String,
+        uniqueId: String
     },
 });
 exports.collection1 = mongoose_1.default.model("colleges_summaries", newSchema1);

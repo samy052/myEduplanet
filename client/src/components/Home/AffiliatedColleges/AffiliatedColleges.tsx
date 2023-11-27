@@ -40,7 +40,7 @@ const AffiliatedColleges = () => {
 
   return (
     <div className="affiliated-colleges-slider">
-      <br /><br />
+      <br />
       <h2 className="affiliated-colleges-heading">Associated Colleges</h2>
       <Slider {...settings}>
         {colleges.map((college) => (
