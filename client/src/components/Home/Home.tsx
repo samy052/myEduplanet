@@ -17,6 +17,9 @@ import DataCard from "./DataCard/DataCard";
 import "./DataCard/DataCardStyles.css";
 import Navbar from "../Navbar/Navbar";
 
+import BlogsSection from "./BlogsSection/BlogsSection";
+import "./BlogsSection/BlogsSectionStyles.css";
+
 const Home = () => {
   return (
     <>
@@ -25,6 +28,7 @@ const Home = () => {
         <SearchBar />
         <NewsSection />
         <ReviewSection />
+        <BlogsSection />
         <AffiliatedColleges />
         <DataCard />
         <Footer />

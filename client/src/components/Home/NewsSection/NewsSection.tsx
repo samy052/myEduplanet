@@ -1,78 +1,56 @@
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import { Link } from "react-router-dom";
-
 const NewsSection = () => {
   const newsData = [
     {
-      id: 4,
-      newsContent: "Examination dates for GATE and CAT are now confirmed.",
-      timeline: "1 Jan, 2023, 18:34 IST",
+      id: 1,
+      newsContent:
+        "JEE Advanced 2024: IIT Madras to conduct exam on May 26, 2024 - check key details",
       url: "https://wearecoandco.com/",
       image:
-        "https://images.unsplash.com/photo-1635530027421-b793c5c8d045?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNvdXJjZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60",
+        "https://www.financialexpress.com/wp-content/uploads/2023/11/FE-93.jpg?w=1024",
+    },
+    {
+      id: 2,
+      newsContent:
+        "‘Nothing we could do but move with the crowd’: Eyewitnesses on Kochi college stampede",
+      url: "https://verbalplusvisual.com/",
+      image:
+        "https://bsmedia.business-standard.com/_media/bs/img/article/2020-01/10/full/1578600734-4954.jpg?im=FeatureCrop,size=(803,452)",
+    },
+    {
+      id: 3,
+      newsContent:
+        "IIT at 13, Apple employee by 24, but this farmer's son from Bihar has his eyes set elsewhere",
+      url: "https://www.monographcomms.ca/",
+      image:
+        "https://img.freepik.com/free-photo/successful-businessman_1098-18155.jpg?w=740&t=st=1701121004~exp=1701121604~hmac=0227b0bdb89eb6e705768fe505627c53f9803ac578379b051407b61f660524ce",
+    },
+    {
+      id: 4,
+      newsContent:
+        "US: Three Palestinian college students shot in Vermont during Thanksgiving holiday, shooter still at large",
+      url: "https://verbalplusvisual.com/",
+      image:
+        "https://resize.indiatvnews.com/en/centered/newbucket/1200_675/2023/11/university-of-vermont-1701058071.jpg",
     },
     {
       id: 5,
-      newsContent: "Examination dates for GATE and CAT are now confirmed.",
-      timeline: "1 Jan, 2023, 18:34 IST",
-      url: "https://verbalplusvisual.com/",
-      image:
-        "https://images.unsplash.com/photo-1585399000684-d2f72660f092?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NXw5NDc5NTAwfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=700&q=60",
-    },
-    {
-      id: 6,
-      newsContent: "Examination dates for GATE and CAT are now confirmed.",
+      newsContent:
+        "AKTU VC resigns three days after he was removed by governor",
       timeline: "1 Jan, 2023, 18:34 IST",
       url: "https://www.monographcomms.ca/",
       image:
-        "https://images.unsplash.com/photo-1625225233840-695456021cde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NDc5NTAwfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=700&q=60",
-    },
-    {
-      id: 5,
-      newsContent: "Examination dates for GATE and CAT are now confirmed.",
-      timeline: "1 Jan, 2023, 18:34 IST",
-      url: "https://verbalplusvisual.com/",
-      image:
-        "https://images.unsplash.com/photo-1585399000684-d2f72660f092?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NXw5NDc5NTAwfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=700&q=60",
+        "https://static.toiimg.com/thumb/msid-97713121,imgsize-15090,width-400,resizemode-4/97713121.jpg",
     },
     {
       id: 6,
-      newsContent: "Examination dates for GATE and CAT are now confirmed.",
+      newsContent:
+        "AKTU One View Result 2023 Declared for BTech Regular Exams; Download 2nd and 4th Sem Mark Sheet Here",
       timeline: "1 Jan, 2023, 18:34 IST",
       url: "https://www.monographcomms.ca/",
       image:
-        "https://images.unsplash.com/photo-1625225233840-695456021cde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw5NDc5NTAwfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=700&q=60",
+        "https://img.jagranjosh.com/images/2023/October/20102023/aktu-one-view-result-2023.jpg",
     },
   ];
-
-  // const settings = {
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 2000,
-  //   cssEase: "linear",
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 768,
-  //       settings: {
-  //         centerMode: true,
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //   ],
-  //};
 
   return (
     <>
@@ -84,46 +62,14 @@ const NewsSection = () => {
               <img src={val.image} alt="" />
               <div className="news-section-card-text-section">
                 <p>{val.newsContent}</p>
-                <div className="news-section-card-more-details">
-                  <p>{val.timeline}</p>
-                </div>
               </div>
             </div>
           ))}
-          <div className="see-more-button1">
-            <button><i className="fa-solid fa-arrow-right fa-beat-fade"></i></button>
-          </div>
-          <div className="see-more-button2">
-            <button>More Like This</button>
-          </div>
+        </div>
+        <div className="see-more-button">
+          <button>More Like This</button>
         </div>
       </div>
-
-      {/* <div className="news-cointainer">
-        <Link to={"/vlogs"}>
-          <h2 className="news-heading">Exam Notifications</h2>
-        </Link>
-        <Slider {...settings}>
-          {newsData.map((news) => (
-            <a
-              href={news.url}
-              target="_blank"
-              className="news-card"
-              key={news.id}
-            >
-              <div className="news-card-content">
-                <div className="news-image">
-                  <img src={news.image} />
-                </div>
-                <div className="news-content">
-                  <h5 className="news-title">{news.newsContent}</h5>
-                  <p className="news-timeline"> {news.timeline} </p>
-                </div>
-              </div>
-            </a>
-          ))}
-        </Slider>
-      </div> */}
     </>
   );
 };

@@ -1,45 +1,133 @@
-.container {
-  max-width: 800px;
-  margin-top: 50px;
-  padding: 20px;
+.filter-btns {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  overflow: hidden;
 }
 
-.container h2 {
-  margin-bottom: 10px;
+.filter-btn {
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  border: 1px solid #716EEF;
+  outline: none;
+  cursor: pointer;
+  font-weight: 300;
+  background-color: #fff;
+  color: #716EEF;
+  transition: ease 0.5s;
 }
 
-.exam-info {
-  background-color: #e3e1e1;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.exam-info:hover {
-  transform: scale(1.02);
-}
-
-.exam-info h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.exam-info p {
-  margin-bottom: 10px;
-}
-
-.exam-info a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
+.filter-btns button:hover {
+  background-color: #716EEF;
   color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
 }
 
-.exam-info a:hover {
-  background-color: #0056b3;
+.active-filter-btn {
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  border: 1px solid #716EEF;
+  outline: none;
+  cursor: pointer;
+  font-weight: 300;
+  background-color: #716EEF;
+  color: #fff;
+  transition: ease 0.5s;
+}
+
+.exam-card-container {
+  max-width: 1100px;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.exam-card {
+  position: relative;
+  width: 20rem;
+  height: 10rem;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  background: #F0F4FF;
+  overflow: hidden;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.8);
+}
+
+.exam-card-top {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.exam-card-top img {
+  height: 95px;
+  width: 80px;
+  object-fit: cover;
+}
+
+.exam-card-text-section {
+  margin-top: -0.35rem;
+}
+
+.exam-card-text-section h3 {
+  font-size: 0.98rem;
+}
+
+.exam-card-text-section p {
+  font-size: 0.8rem;
+}
+
+.exam-card-text-section-btns {
+  position: absolute;
+  bottom: 5px;
+}
+
+.exam-card-text-section-btns button {
+  padding: 0.3rem 0.4rem;
+  border-radius: 1rem;
+  outline: none;
+  cursor: pointer;
+  font-weight: 800;
+  margin-left: 0.3rem;
+}
+
+.read-more-btn {
+  background-color: #fff;
+  border: 1px solid #012d58;
+}
+
+.read-more-btn:hover {
+  transform: scale(0.9);
+  transition: all 0.3s ease-in;
+}
+
+.read-more-btn a {
+  color: #012d58;
+}
+
+.app-now {
+  border: 1.8px solid #716EEF;
+  background-color: #716EEF;
+  color: #fff;
+}
+
+.app-now:hover {
+  background-color: #fff;
+  color: #716EEF;
+  transition: all ease-out 0.5s;
+}
+
+@media (width<830px) {
+  .filter-btns {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+
+  .filter-btn,
+  .active-filter-btn {
+    margin: 5px;
+  }
 }
