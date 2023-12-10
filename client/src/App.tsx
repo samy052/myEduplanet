@@ -27,6 +27,11 @@ import "./components/CollegePage/CollegePageStyles.css";
 import Admin from "./Admin/Admin";
 import EditProfile from "./components/Profile/EditProfile";
 import SidebarPopup from "./components/CounsellingSidebar/SidebarPopup";
+import SingleBlog from "./components/Blogs/SingleBlog";
+import Blog from "./components/Blogs/Blog";
+import AdminBlog from "./components/Blogs/AdminBlog";
+
+
 
 const App = () => {
   return (
@@ -40,6 +45,13 @@ const App = () => {
           <Route path="/exams" element={<Exams />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          {/* Display Blogs */}
+          <Route path="/blogs" element={<Blog />} />
+          {/* Manage Blogs (Admin Panel) */}
+          <Route path="/admin/blogs" element={<AdminBlog />} />
+          {/* Display Single Blog */}
+          <Route path="/blogs" element={<Blog />} />
+          <Route path="/blogs/:blogId" element={<SingleBlog />} />
           <Route
             path="/colleges/:name/:city/:zipcode/:contact"
             element={<CollegePage />}

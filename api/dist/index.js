@@ -17,6 +17,7 @@ const cors_1 = __importDefault(require("cors"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const colleges_1 = require("./models/colleges");
 const users_1 = require("./models/users");
+const blogs_1 = __importDefault(require("./models/blogs"));
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
@@ -154,3 +155,41 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
+app.get('/api/blogs', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const blogs = yield blogs_1.default.find();
+        res.json(blogs);
+    }
+    catch (error) {
+        console.error('Error fetching blogs:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+}));
+// Fetch a single blog by ID
+app.get('/api/blogs/:blogId', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { blogId } = req.params;
+        const blog = yield blogs_1.default.findById(blogId);
+        if (!blog) {
+            return res.status(404).json({ error: 'Blog not found' });
+        }
+        res.json(blog);
+    }
+    catch (error) {
+        console.error('Error fetching single blog:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+}));
+// Insert a new blog
+app.post('/api/blogs', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { title, content, imageUrl } = req.body;
+        const newBlog = new blogs_1.default({ title, content, imageUrl });
+        const savedBlog = yield newBlog.save();
+        res.json(savedBlog);
+    }
+    catch (error) {
+        console.error('Error inserting blog:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+}));
