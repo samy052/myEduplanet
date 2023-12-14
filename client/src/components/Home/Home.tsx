@@ -1,5 +1,5 @@
-import AffiliatedColleges from "./AffiliatedColleges/AffiliatedColleges";
-import "./AffiliatedColleges/AffiliatedCollegesStyles.css";
+// import AffiliatedColleges from "./AffiliatedColleges/AffiliatedColleges";
+// import "./AffiliatedColleges/AffiliatedCollegesStyles.css";
 
 import NewsSection from "./NewsSection/NewsSection";
 import "./NewsSection/NewsSectionStyles.css";
@@ -29,7 +29,7 @@ const Home = () => {
         <NewsSection />
         <ReviewSection />
         <BlogsSection />
-        <AffiliatedColleges />
+        {/* <AffiliatedColleges /> */}
         <DataCard />
         <Footer />
       </div>

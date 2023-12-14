@@ -28,19 +28,42 @@ const Blog: React.FC = () => {
   }, []);
 
   return (
-    <div className="container">
-      <h1>All Blogs</h1>
-      {blogs.map((blog) => (
-        <Link to={`/blogs/${blog._id}`} key={blog._id} className="blog-link">
-          <div className="blog-post">
-            <h2 className="blog-title">{blog.title}</h2>
-            <img className="blog-image" src={blog.imageUrl} alt={blog.title} />
-            <p className="blog-content" dangerouslySetInnerHTML={{ __html: blog.content }} />
+    
+    <div className="blogs-section-container">
+    <h1>Blogs</h1>
+    <div className="blogs-section-card-container">
+      {blogs.map((val, ind) => (
+      <Link to={`/blogs/${val._id}`} key={val._id} >
+        <div className="blogs-section-card" key={ind}>
+          <img src={val.imageUrl} alt="" />
+          <div className="blogs-section-card-text-section">
+            <h5>{val.title}</h5>
+            <p>
+              <span>By </span>
+              {/* {val.author} */}
+            </p>
           </div>
+          
+        </div>
         </Link>
       ))}
+      
     </div>
-  );
+  </div>
+    // <div className="container">
+    //   <h1>All Blogs</h1>
+    //   {blogs.map((blog) => (
+    //     <Link to={`/blogs/${blog._id}`} key={blog._id} className="blog-link">
+    //       <div className="blog-post">
+    //         <h2 className="blog-title">{blog.title}</h2>
+    //         <img className="blog-image" src={blog.imageUrl} alt={blog.title} />
+    //         <p className="blog-content" dangerouslySetInnerHTML={{ __html: blog.content }} />
+    //       </div>
+
+    // </Link>
+  //     ))}
+  //   </div>
+   );
 };
 
 export default Blog;

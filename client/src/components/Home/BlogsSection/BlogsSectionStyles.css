@@ -21,7 +21,7 @@
     cursor: pointer;
     overflow: hidden;
     margin: 0 auto;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     transition: 0.3s ease;
 }
@@ -54,81 +54,51 @@
     color: gray;
 }
 
-/* .see-more-button1 {
-    margin-bottom: 1rem;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media (width<1200px) {
+    .blogs-section-card {
+        width: 18rem;
+        height: 18rem;
+    }
 }
 
-.see-more-button1 button {
-    border-radius: 50%;
-    height: 6rem;
-    width: 6rem;
-    background-color: #fff;
-    color: #012d58;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 3rem;
-    font-weight: 800;
-    border: 1px solid #012d58;
-}
-
-.see-more-button1 button:hover {
-    background-color: #012d58;
-    color: #fff;
-    transition: all ease-out 0.5s;
-}
-
-.see-more-button2 {
-    display: none;
-} */
-
-@media (width<600px) {
-    .blogs-section-container h1 {
-        font-size: 1.6rem;
+@media (width<500px) {
+    .blogs-section-card-container {
+        width: 96%;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0;
+        row-gap: 0;
     }
 
     .blogs-section-card {
-        display: flex;
-        height: 5rem;
-        border-radius: 0.4rem;
-        margin-bottom: 1rem;
+        width: 12rem;
+        height: 12rem;
+        margin-bottom: 20px;
     }
 
     .blogs-section-card img {
-        height: 100%;
-        width: 30%;
-        border-right: 1px solid #000;
-        border-bottom: none;
+        height: 76%;
     }
 
-    .blogs-section-card-text-section {
-        padding-left: 5px;
-        padding-top: 3px;
-        font-size: 0.8rem;
+    .blogs-section-card-text-section h5,
+    .blogs-section-card-text-section p {
+        font-size: small;
+    }
+}
+
+@media (width<420px) {
+    .blogs-section-card {
+        width: 8rem;
+        height: 8rem;
+        margin-bottom: 20px;
     }
 
-    .blogs-section-card-more-details {
-        margin-top: 1rem;
+
+    .blogs-section-card img {
+        height: 70%;
     }
 
-    .see-more-button1 button {
-        display: none;
-    }
-
-    .see-more-button2 {
-        display: block;
-        text-align: center;
-    }
-
-    .see-more-button2 button {
-        padding: 0.2rem 0.4rem;
-        font-size: 0.8rem;
-        font-weight: 300;
-        text-align: center;
-        cursor: pointer;
+    .blogs-section-card-text-section h5,
+    .blogs-section-card-text-section p {
+        font-size: 10px;
     }
 }

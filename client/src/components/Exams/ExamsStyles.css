@@ -90,32 +90,32 @@
   cursor: pointer;
   font-weight: 800;
   margin-left: 0.3rem;
-}
-
-.read-more-btn {
-  background-color: #fff;
-  border: 1px solid #012d58;
-}
-
-.read-more-btn:hover {
-  transform: scale(0.9);
   transition: all 0.3s ease-in;
 }
 
-.read-more-btn a {
-  color: #012d58;
+.exam-card-btn {
+  background-color: #fff;
+  border: 1px solid #716EEF;
 }
 
-.app-now {
-  border: 1.8px solid #716EEF;
+.exam-card-btn:hover {
   background-color: #716EEF;
   color: #fff;
 }
 
-.app-now:hover {
+.exam-card-btn {
+  color: #716EEF;
+}
+
+.get-brochure {
+  border: 1px solid #716EEF;
+  background-color: #716EEF;
+  color: #fff;
+}
+
+.get-brochure:hover {
   background-color: #fff;
   color: #716EEF;
-  transition: all ease-out 0.5s;
 }
 
 @media (width<830px) {
@@ -129,5 +129,18 @@
   .filter-btn,
   .active-filter-btn {
     margin: 5px;
+  }
+}
+
+@media (width<340px) {
+  .exam-card {
+    width: 18rem;
+  }
+
+  .exam-card-text-section-btns button {
+    padding: 0.1rem 0.4rem;
+    font-weight: 300;
+    font-size: 0.75rem;
+    margin-left: 0.2rem;
   }
 }
