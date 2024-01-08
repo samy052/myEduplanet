@@ -11,12 +11,13 @@ export const signup = async (
   res: any,
   next: (arg0: unknown) => void
 ) => {
-  const { username, password, email, level, interest } = req.body;
+  const { username, password, email, phNo, level, interest } = req.body;
   const hashedPassword = bcryptjs.hashSync(password, 10);
   const newUser = new User({
     username,
     password: hashedPassword,
     email,
+    phNo,
     level,
     interest,
   });

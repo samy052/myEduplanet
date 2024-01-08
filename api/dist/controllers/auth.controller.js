@@ -31,12 +31,13 @@ const error_1 = require("../utils/error");
 // import dotenv from "dotenv";
 // dotenv.config();
 const signup = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
-    const { username, password, email, level, interest } = req.body;
+    const { username, password, email, phNo, level, interest } = req.body;
     const hashedPassword = bcryptjs_1.default.hashSync(password, 10);
     const newUser = new user_model_1.User({
         username,
         password: hashedPassword,
         email,
+        phNo,
         level,
         interest,
     });

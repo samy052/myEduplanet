@@ -19,6 +19,8 @@ import Navbar from "../Navbar/Navbar";
 
 import BlogsSection from "./BlogsSection/BlogsSection";
 import "./BlogsSection/BlogsSectionStyles.css";
+import FilterBtns from "./FilterBtns/FilterBtns";
+import "./FilterBtns/FilterBtns.css";
 
 const Home = () => {
   return (
@@ -27,6 +29,7 @@ const Home = () => {
         <Navbar />
         <SearchBar />
         <NewsSection />
+        <FilterBtns/>
         <ReviewSection />
         <BlogsSection />
         {/* <AffiliatedColleges /> */}

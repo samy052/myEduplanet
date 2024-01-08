@@ -1,0 +1,49 @@
+.filter-container h1 {
+    text-align: center;
+    margin: 2rem 0;
+    font-weight: 100;
+    font-size: 2.2rem;
+    color: #716EEF;
+}
+
+.filter-card-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.filter-card {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    transition: 0.5s ease;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.filter-card h3 {
+    font-size: 0.8rem;
+    font-weight: 300;
+    padding-bottom: 0.2rem;
+}
+
+.filter-card:hover {
+    border: 1px solid #716EEF;
+    cursor: pointer;
+    /* filter: blur(1px); */
+}
+
+@media (width<600px) {
+    .filter-card-container {
+        width: 95%;
+        gap: 1rem;
+    }
+}

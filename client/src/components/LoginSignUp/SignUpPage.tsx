@@ -93,6 +93,17 @@ const SignUp = () => {
             required
             onChange={handleChange}
           />
+          <label>Phone No.</label>
+          <input
+            type="text"
+            title="Error Message"
+            pattern="[1-9]{1}[0-9]{9}"
+            id="phNo"
+            name="phNo"
+            placeholder="Enter your Phone number"
+            required
+            onChange={handleChange}
+          />
 
           <label>Password</label>
           <input
