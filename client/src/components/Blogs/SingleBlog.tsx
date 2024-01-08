@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Navbar from '../Navbar/Navbar';
 
 interface Blog {
   _id: string;
@@ -32,11 +33,13 @@ const SingleBlog: React.FC = () => {
   }
 
   return (
+    <>
+    <Navbar/>
     <div>
       <h1>{blog.title}</h1>
       <img src={blog.imageUrl} alt={blog.title} />
       <p dangerouslySetInnerHTML={{ __html: blog.content }} />
-    </div>
+    </div></>
   );
 };
 

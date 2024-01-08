@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Blog.css';
+import Navbar from '../Navbar/Navbar';
 
 interface Blog {
   _id: string;
@@ -28,8 +29,11 @@ const Blog: React.FC = () => {
   }, []);
 
   return (
+
+    <>
+    <Navbar/>
     
-    <div className="blogs-section-container">
+    <div className="blogs-section-container-h">
     <h1>Blogs</h1>
     <div className="blogs-section-card-container">
       {blogs.map((val, ind) => (
@@ -49,7 +53,9 @@ const Blog: React.FC = () => {
       ))}
       
     </div>
-  </div>
+  </div></>
+    
+    
     // <div className="container">
     //   <h1>All Blogs</h1>
     //   {blogs.map((blog) => (

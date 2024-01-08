@@ -2,8 +2,8 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import { collection1, collection2 } from "./models/colleges";
-import { UserModel } from "./models/users";
 import BlogModel from "./models/blogs";
+import authRouter from "./routes/auth.route";
 
 const app = express();
 
@@ -20,46 +20,67 @@ mongoose
   .catch(() => {
     console.log("error");
   });
-  const db = mongoose.connection;
+  // const db = mongoose.connection;
+  
+  
+  app.use("/api/auth", authRouter);
 
-  db.once('open', async () => {
-    try {
-      // Step 1: Update collection1
-      const allColleges = await collection1.find({});
+  //middleware for errors
+  // app.use(
+  //   (
+  //     err: { statusCode: number; message: string },
+  //     req: { body: any },
+  //     res: any,
+  //     next: (arg0: unknown) => void
+  //   ) => {
+  //     const statusCode = err.statusCode  500;
+  //     const message = err.message  "Internal Server Error";
+  //     return res.status(statusCode).json({
+  //       sucess: false,
+  //       statusCode,
+  //       message,
+  //     });
+  //   }
+  // );
+
+  // db.once('open', async () => {
+  //   try {
+  //     // Step 1: Update collection1
+  //     const allColleges = await collection1.find({});
   
-      for (let i = 0; i < allColleges.length; i++) {
-        const college = allColleges[i];
-        await collection1.updateOne(
-          { _id: college._id },
-          { $set: { uniqueId: i + 1 } }
-        );
-      }
+  //     for (let i = 0; i < allColleges.length; i++) {
+  //       const college = allColleges[i];
+  //       await collection1.updateOne(
+  //         { _id: college._id },
+  //         { $set: { uniqueId: i + 1 } }
+  //       );
+  //     }
   
-      console.log("Unique IDs added successfully to collection1");
+  //     console.log("Unique IDs added successfully to collection1");
   
-      // Step 2: Update collection2
-      const allColleges1 = await collection1.find({});
-      const allColleges2 = await collection2.find({});
+  //     // Step 2: Update collection2
+  //     const allColleges1 = await collection1.find({});
+  //     const allColleges2 = await collection2.find({});
   
-      for (let i = 0; i < allColleges1.length; i++) {
-        const college1 = allColleges1[i];
-        const matchingCollege2 = allColleges2.find(college2 => college2.formData?.collegeName === college1.Name);
+  //     for (let i = 0; i < allColleges1.length; i++) {
+  //       const college1 = allColleges1[i];
+  //       const matchingCollege2 = allColleges2.find(college2 => college2.formData?.collegeName === college1.Name);
   
-        if (matchingCollege2) {
-          await collection2.updateOne(
-            { Name: college1.Name },
-            { $set: { uniqueId: i + 1 } }
-          );
-          console.log("Unique IDs added successfully to collection2");
-        }
+  //       if (matchingCollege2) {
+  //         await collection2.updateOne(
+  //           { Name: college1.Name },
+  //           { $set: { uniqueId: i + 1 } }
+  //         );
+  //         console.log("Unique IDs added successfully to collection2");
+  //       }
         
-      }
+  //     }
   
       
-    } catch (error) {
-      console.error(error);
-    }
-  });
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // });
 
 //route to fetch college data from  dataBASE
 
@@ -123,43 +144,20 @@ app.post("/admin", async (req, res) => {
   };
   await collection2.insertMany([data]);
 });
-app.post("/signup", async (req, res) => {
-  await UserModel.create(req.body)
-    .then((users) => {
-      res.json(users);
-    })
-    .catch((error) => res.json(error));
+
+
+app.post("/admin", async (req, res) => {
+  const { formData } = req.body;
+  const data = {
+    formData: formData,
+  };
+  await collection2.find([data]);
 });
 
-let data: any;
-app.post("/login", async (req, res) => {
-  const { logPass, logEmail } = req.body;
-  const userData = await UserModel.findOne({ email: logEmail });
-  if (userData) {
-    if (userData.password === logPass) {
-      if (userData.email === "specialId@myEduPlanet.com") {
-        res.json("69");
-      } else {
-        res.json("Success");
-      }
-      data = userData;
-    } else {
-      res.json("Invalid");
-    }
-  } else {
-    res.json("No User");
-  }
-});
 
-app.get("/profile", (req, res) => {
-  res.json(data);
-});
 
-app.get("/logout", (req, res) => {
-  data = 0;
-  res.json(data);
-  console.log(data);
-});
+
+
 app.get("/", (req, res) => {
   res.send("Working with typescript is tough 😶‍🌫️");
 });

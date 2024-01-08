@@ -30,6 +30,15 @@ import SidebarPopup from "./components/CounsellingSidebar/SidebarPopup";
 import SingleBlog from "./components/Blogs/SingleBlog";
 import Blog from "./components/Blogs/Blog";
 import AdminBlog from "./components/Blogs/AdminBlog";
+import Navbar from "./components/Navbar/Navbar";
+
+import LoginPage from "./components/LoginSignUp/LoginPage";
+import SignUpPage from "./components/LoginSignUp/SignUpPage";
+import "./components/LoginSignUp/LoginSignUpStyles.css";
+
+import PrivateRoute from "./components/PrivateRoute";
+
+import Profile from "./components/Profile/Profile";
 
 
 
@@ -58,8 +67,15 @@ const App = () => {
           />{" "}
           {/* //city */}
           <Route path="/admin" element={<Admin />} />
+          <Route element={<PrivateRoute />}>
+            <Route path="/profile" element={<Profile />} />
+          </Route>
+          <Route path="/loginPage" element={<LoginPage />} />
+          <Route path="/signUpPage" element={<SignUpPage />} />
           <Route path="/manage/:name/:email/:city" element={<EditProfile />} />
         </Routes>
+          
+        
       </Router>
     </>
   );

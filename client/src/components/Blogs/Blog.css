@@ -1,10 +1,21 @@
 /* BlogStyles.css */
+.blogs-section-container-h{
+  margin-top: 5rem;
+  text-align: center;
+  /* margin: 2rem 0; */
+  font-weight: 50;
+  font-size: 1.5rem;
+  color: #716EEF;
+ 
+}
 
 /* Container styling */
 .container {
     max-width: 800px;
     margin: 0 auto;
+    
     padding: 20px;
+    
   }
   
   /* Blog post styling */

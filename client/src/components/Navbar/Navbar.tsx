@@ -1,51 +1,22 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-
-import LoginSignup from "../LoginSignup/LoginSignup";
-import "../LoginSignup/LoginSignup.css";
+import { useSelector } from "react-redux";
 
 import CoursesDropdown from "../CoursesDropdown/CoursesDropdown";
 import ExamDropdown from "../ExamDropdown/ExamDropdown";
 
-import axios from "axios";
-
 const Navbar = () => {
+  const { currentUser } = useSelector((state) => state.user);
   const [icon, seticon] = useState(false);
   const [display, setDisplay] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const [users, setUsers] = useState([]);
-  console.log(users);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:4000/profile")
-      .then((users) => {
-        setUsers(users.data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
   function handleClick() {
     seticon((icon) => !icon);
     setDisplay((display) => !display);
   }
-
-  // function logout() {
-  //   axios
-  //     .get("http://localhost:4000/logout")
-  //     .then((users) => {
-  //       console.log(users.data);
-  //       setUsers(users.data);
-  //     })
-  //     .catch((err) => console.log(err));
-  //   alert("Logged Out");
-  //   console.log(users);
-  // }
+  console.log(currentUser);
 
   const updateMenuIcon = icon ? "fa-solid fa-x" : "fa-solid fa-list";
   const displayNavItems = display ? "nav-menu active" : "nav-menu";
-
   return (
     <>
       <nav className="NavBarItems">
@@ -73,59 +44,15 @@ const Navbar = () => {
           <Link to={"/contact"} className="nav-links">
             Contact
           </Link>
-
-          {/* {users != 0 && (
-            <>
-              <div className="user">
-                <i className="fa-regular fa-user"></i>
-                <div className="user-dropdown-container">
-                  <div className="user-details">
-                    <p>{users["username"]}</p>
-                    <p>{users["email"]}</p>
-                  </div>
-                  <Link
-                    to={
-                      "/manage" +
-                      "/" +
-                      users["username"] +
-                      "/" +
-                      users["email"] +
-                      "/" +
-                      users["city"]
-                    }
-                  >
-                    <p>Manage Profile</p>
-                  </Link>
-
-                  <Link to="/" onClick={logout}>
-                    <p>Log Out</p>
-                  </Link>
-                </div>
-              </div>
-            </>
-          )}
-          {users == 0 && (
-            <button
-              onClick={() => {
-                setModalOpen(true);
-              }}
-              className="nav-links-mobile"
-            >
-              Login/Signup
-            </button>
-          )} */}
-
-          <button
-            onClick={() => {
-              setModalOpen(true);
-            }}
-            className="nav-links-mobile"
-          >
-            Login/Signup
-          </button>
+          <Link to={"/profile"}>
+            {currentUser ? (
+              <img src={currentUser.avatar} className="user-img" />
+            ) : (
+              <p className="nav-links-mobile">SignUp/LogIn</p>
+            )}
+          </Link>
         </ul>
       </nav>
-      {modalOpen && <LoginSignup setOpenModal={setModalOpen} />}
     </>
   );
 };

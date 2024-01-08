@@ -4,7 +4,9 @@
     font-weight: 100;
     font-size: 2.2rem;
     color: #716EEF;
+   
 }
+
 
 .blogs-section-card-container {
     max-width: 1200px;
@@ -15,8 +17,8 @@
 }
 
 .blogs-section-card {
-    width: 23rem;
-    height: 20rem;
+    width: 20rem;
+    height: 18rem;
     background-color: #fff;
     cursor: pointer;
     overflow: hidden;
@@ -54,6 +56,8 @@
     color: gray;
 }
 
+
+
 @media (width<1200px) {
     .blogs-section-card {
         width: 18rem;
@@ -84,6 +88,7 @@
         font-size: small;
     }
 }
+
 
 @media (width<420px) {
     .blogs-section-card {
