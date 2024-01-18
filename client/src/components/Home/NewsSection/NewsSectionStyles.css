@@ -23,6 +23,7 @@
   margin: 0 auto;
   transition: all ease 0.3s;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  overflow: hidden;
 }
 
 .news-section-card:hover {

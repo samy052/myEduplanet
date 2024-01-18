@@ -13,7 +13,7 @@ import "./SearchBar/SearchBarStyles.css";
 import Footer from "./Footer/Footer";
 import "./Footer/FooterStyles.css";
 
-import DataCard from "./DataCard/DataCard";
+// import DataCard from "./DataCard/DataCard";
 import "./DataCard/DataCardStyles.css";
 import Navbar from "../Navbar/Navbar";
 
@@ -33,7 +33,7 @@ const Home = () => {
         <ReviewSection />
         <BlogsSection />
         {/* <AffiliatedColleges /> */}
-        <DataCard />
+        {/* <DataCard /> */}
         <Footer />
       </div>
     </>

@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import { collection1, collection2 } from "./models/colleges";
 import BlogModel from "./models/blogs";
 import authRouter from "./routes/auth.route";
+import NotificationModel from "./models/notification";
 
 const app = express();
 
@@ -195,6 +196,7 @@ app.get('/api/blogs/:blogId', async (req, res) => {
 
 
 
+
 // Insert a new blog
 app.post('/api/blogs', async (req, res) => {
   try {
@@ -204,6 +206,48 @@ app.post('/api/blogs', async (req, res) => {
     res.json(savedBlog);
   } catch (error) {
     console.error('Error inserting blog:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+
+// Fetch all exam notifications
+app.get('/api/notifications', async (req, res) => {
+  try {
+    const notifications = await NotificationModel.find();
+    res.json(notifications);
+  } catch (error) {
+    console.error('Error fetching exam notifications:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+// Fetch a single exam notification by ID
+app.get('/api/notifications/:notificationId', async (req, res) => {
+  try {
+    const { notificationId } = req.params;
+    const notification = await NotificationModel.findById(notificationId);
+
+    if (!notification) {
+      return res.status(404).json({ error: 'Exam notification not found' });
+    }
+
+    res.json(notification);
+  } catch (error) {
+    console.error('Error fetching single exam notification:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+// Insert a new exam notification
+app.post('/api/notifications', async (req, res) => {
+  try {
+    const { title, content, imageUrl } = req.body;
+    const newNotification = new NotificationModel({ title, content, imageUrl });
+    const savedNotification = await newNotification.save();
+    res.json(savedNotification);
+  } catch (error) {
+    console.error('Error inserting exam notification:', error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });

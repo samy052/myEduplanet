@@ -8,18 +8,18 @@
 
 .filter-card-container {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 80%;
+    width: 60rem;
     margin: 0 auto;
 }
 
 .filter-card {
-    height: 10rem;
-    width: 10rem;
-    border-radius: 5px;
+    height: 9rem;
+    width: 9rem;
+    border-radius: 3px;
     border: 1px solid #fff;
     display: flex;
     flex-direction: column;
@@ -27,6 +27,11 @@
     justify-content: flex-end;
     transition: 0.5s ease;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.img-div img {
+    height: 6rem;
+    width: 6rem;
 }
 
 .filter-card h3 {
@@ -38,12 +43,32 @@
 .filter-card:hover {
     border: 1px solid #716EEF;
     cursor: pointer;
-    /* filter: blur(1px); */
 }
 
-@media (width<600px) {
+@media (width<960px) {
     .filter-card-container {
-        width: 95%;
-        gap: 1rem;
+        width: 40rem;
+    }
+}
+
+@media (width<650px) {
+    .filter-card-container {
+        width: 96%;
+        gap: 0.5rem;
+    }
+
+    .filter-card {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .img-div img {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .filter-card h3 {
+        font-size: 0.6rem;
+        padding-bottom: 0.1rem;
     }
 }

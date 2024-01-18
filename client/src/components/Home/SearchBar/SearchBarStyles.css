@@ -5,11 +5,7 @@
   justify-content: space-evenly;
   gap: 10rem;
   background-color: #bac3f4;
-  height: 60vh;
-  /* background-image: url("../../../../assets/img/3d-render-graduation-cap-books-d.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
+  height: 30rem;
 }
 
 .slider {
@@ -19,7 +15,6 @@
   margin-top: 2rem;
   position: relative;
   overflow: hidden;
-
   border-radius: 10px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -31,11 +26,9 @@
 }
 
 .hero-section-flyer button {
-  /* z-index: 101; */
   position: absolute;
   bottom: 50px;
   margin-left: 1rem;
-
   padding: 0.3rem 0.8rem;
   white-space: nowrap;
   background-color: #716eef;
@@ -121,7 +114,6 @@
 }
 
 .search_result {
-  /* border-radius: 5rem; */
   position: absolute;
   top: 3.59rem;
   max-height: 200px;
@@ -150,7 +142,7 @@
   .hero-section {
     flex-direction: column;
     align-items: center;
-    height: 90vh;
+    height: 46rem;
   }
 
   .slider-container {

@@ -18,6 +18,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const colleges_1 = require("./models/colleges");
 const blogs_1 = __importDefault(require("./models/blogs"));
 const auth_route_1 = __importDefault(require("./routes/auth.route"));
+const notification_1 = __importDefault(require("./models/notification"));
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
@@ -183,6 +184,45 @@ app.post('/api/blogs', (req, res) => __awaiter(void 0, void 0, void 0, function*
     }
     catch (error) {
         console.error('Error inserting blog:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+}));
+// Fetch all exam notifications
+app.get('/api/notifications', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const notifications = yield notification_1.default.find();
+        res.json(notifications);
+    }
+    catch (error) {
+        console.error('Error fetching exam notifications:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+}));
+// Fetch a single exam notification by ID
+app.get('/api/notifications/:notificationId', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { notificationId } = req.params;
+        const notification = yield notification_1.default.findById(notificationId);
+        if (!notification) {
+            return res.status(404).json({ error: 'Exam notification not found' });
+        }
+        res.json(notification);
+    }
+    catch (error) {
+        console.error('Error fetching single exam notification:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+}));
+// Insert a new exam notification
+app.post('/api/notifications', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { title, content, imageUrl } = req.body;
+        const newNotification = new notification_1.default({ title, content, imageUrl });
+        const savedNotification = yield newNotification.save();
+        res.json(savedNotification);
+    }
+    catch (error) {
+        console.error('Error inserting exam notification:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 }));

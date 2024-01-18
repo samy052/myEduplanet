@@ -1,0 +1,129 @@
+/* AdminBlogStyles.css */
+
+/* Container styling */
+.admin-blog-container {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+
+  }
+  .admin-blog-container h1{
+    margin-top: 3rem;
+    text-align: center;
+  }
+  
+  /* Form styling */
+  .admin-blog-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Label styling */
+  .admin-blog-label {
+    font-size: 18px;
+  }
+  
+  /* Input styling */
+  .admin-blog-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* ReactQuill styling */
+  .admin-blog-quill-toolbar {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .admin-blog-quill-editor {
+    font-size: 16px;
+    min-height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  /* Button styling */
+  .admin-blog-button {
+    background-color: #007acc;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .admin-blog-button:hover {
+    background-color: #005687;
+  }
+  /* AdminBlogStyles.css */
+
+/* Container styling */
+.admin-blog-container {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Form styling */
+  .admin-blog-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Label styling */
+  .admin-blog-label {
+    font-size: 18px;
+  }
+  
+  /* Input styling */
+  .admin-blog-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* ReactQuill styling */
+  .admin-blog-quill-toolbar {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .admin-blog-quill-editor {
+    font-size: 16px;
+    min-height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  /* Button styling */
+  .admin-blog-button {
+    background-color: #007acc;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .admin-blog-button:hover {
+    background-color: #005687;
+  }

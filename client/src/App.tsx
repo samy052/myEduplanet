@@ -5,7 +5,6 @@ import "../src/App.css";
 import "./components/Navbar/NavbarStyles.css";
 
 import Home from "./components/Home/Home";
-import "./components/Home/HomeStyles.css";
 
 import Courses from "./components/Courses/Courses";
 import "./components/Courses/CoursesStyles.css";
@@ -30,7 +29,7 @@ import SidebarPopup from "./components/CounsellingSidebar/SidebarPopup";
 import SingleBlog from "./components/Blogs/SingleBlog";
 import Blog from "./components/Blogs/Blog";
 import AdminBlog from "./components/Blogs/AdminBlog";
-import Navbar from "./components/Navbar/Navbar";
+// import Navbar from "./components/Navbar/Navbar";
 
 import LoginPage from "./components/LoginSignUp/LoginPage";
 import SignUpPage from "./components/LoginSignUp/SignUpPage";
@@ -39,6 +38,10 @@ import "./components/LoginSignUp/LoginSignUpStyles.css";
 import PrivateRoute from "./components/PrivateRoute";
 
 import Profile from "./components/Profile/Profile";
+
+import ExamNotification from "./components/ExamNotification/ExamNotification";
+import ExamNotificationAdmin from "./components/ExamNotification/ExamNotificationAdmin";
+import SingleExamNotification from "./components/ExamNotification/SingleExamNotification";
 
 
 
@@ -54,6 +57,12 @@ const App = () => {
           <Route path="/exams" element={<Exams />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+
+          <Route path="/admin/notifications" element={<ExamNotificationAdmin />} />
+          <Route path="/notifications/:notificationId" element={<SingleExamNotification />} />
+          <Route path="/notifications" element={<ExamNotification />} />
+
+
           {/* Display Blogs */}
           <Route path="/blogs" element={<Blog />} />
           {/* Manage Blogs (Admin Panel) */}

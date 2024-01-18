@@ -32,7 +32,6 @@ const Blog: React.FC = () => {
 
     <>
     <Navbar/>
-    
     <div className="blogs-section-container-h">
     <h1>Blogs</h1>
     <div className="blogs-section-card-container">
